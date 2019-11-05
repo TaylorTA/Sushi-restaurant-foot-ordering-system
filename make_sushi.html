@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Samurai Sushi - Make Your Own Sushi</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mycart.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html" title="Homepage">
+                    <img class="img-responsive" src="images/samurai_logo.png">
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="header-right">
+            <div class="request-help"><a href="#" id="requestHelp"><span></span>Request Help</a></div>
+            <div class="cart-icon">
+              <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span><span id="cart-text">Cart: $0.00</span></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="body-right">
+        <div id="results" class="grid-food">
+            <h4><b>Make Your Own Sushi</b> feature is not implemented in this prototype.</h4>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="body-left">
+        <form class="search-bar">
+            <input id="search" type="text" placeholder="Search...">
+        </form>
+        <h3 class="menu-title">Menu</h3>
+        <div class="menu">
+            <ul class="menu-items">
+                <li><a href="appetizers.html">Appetizers</a></li>
+                <li><a href="rolls.html">Rolls</a></li>
+                <li><a href="nigiri.html">Nigiri</a></li>
+                <li><a href="sashimi.html">Sashimi</a></li>
+                <li><a href="donburi.html">Donburi</a></li>
+                <li><a href="daily_specials.html">Daily Specials</a></li>
+                <li style="background-color: #ecc6c6;"><a href="javascript:location.reload()">Make Your Own Sushi</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div><label for="refresh"></label><input type="text" style="display:none;" id="refresh" value="no"></div>
+</body>
+</html>

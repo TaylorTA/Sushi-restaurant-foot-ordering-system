@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Samurai Sushi - Appetizers</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mycart.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html" title="Homepage">
+                    <img class="img-responsive" src="images/samurai_logo.png">
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="header-right">
+            <div class="request-help"><a href="#" id="requestHelp"><span></span>Request Help</a></div>
+            <div class="cart-icon">
+                <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span
+                        class="badge badge-notify my-cart-badge"></span><span id="cart-text">Cart: $0.00</span></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="body-right">
+        <div id="results" class="grid-food">
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/appetizers/miso_soup.jpg">
+                    <h4>Miso Soup</h4>
+                    <p>Soy bean paste and seaweed soup.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$1.75</b></div>
+                    <div class="item-qty">
+                        <label for="miso-soup">Qty: </label>
+                        <select id="miso-soup">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="miso-soup" data-name="Miso Soup"
+                                data-summary="Soy bean paste and seaweed soup." data-price="1.75"
+                                data-quantity="miso-soup" data-image="images/appetizers/miso_soup.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/appetizers/edamame.jpg">
+                    <h4>Edamame</h4>
+                    <p>Boiled soy beans.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$3.45</b></div>
+                    <div class="item-qty">
+                        <label for="edamame-app">Qty: </label>
+                        <select id="edamame-app">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="edamame-app" data-name="Edamame"
+                                data-summary="Boiled soy beans." data-price="3.45" data-quantity="edamame-app"
+                                data-image="images/appetizers/edamame.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/appetizers/gomae_salad.jpg">
+                    <h4>Gomae Salad</h4>
+                    <p>Boiled spinach with goma sauce dressing and sprinkled sesame.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$4.45</b></div>
+                    <div class="item-qty">
+                        <label for="gomae-salad">Qty: </label>
+                        <select id="gomae-salad">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="gomae-salad" data-name="Gomae Salad"
+                                data-summary="Boiled spinach with goma sauce dressing and sprinkled sesame."
+                                data-price="4.45" data-quantity="gomae-salad"
+                                data-image="images/appetizers/gomae_salad.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/appetizers/wakame_salad.jpg">
+                    <h4>Wakame Salad</h4>
+                    <p>Seasoned seaweed with sprinkled sesame.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$4.95</b></div>
+                    <div class="item-qty">
+                        <label for="wakame-salad">Qty: </label>
+                        <select id="wakame-salad">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="wakame-salad" data-name="Wakame Salad"
+                                data-summary="Seasoned seaweed with sprinkled sesame." data-price="4.95"
+                                data-quantity="wakame-salad" data-image="images/appetizers/wakame_salad.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/appetizers/gyoza.jpg">
+                    <h4>Gyoza (6 pieces)</h4>
+                    <p>Dumplings filled with ground pork and vegetables.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$4.95</b></div>
+                    <div class="item-qty">
+                        <label for="gyoza-app">Qty: </label>
+                        <select id="gyoza-app">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="gyoza-app" data-name="Gyoza (6 pieces)"
+                                data-summary="Dumplings filled with ground pork and vegetables." data-price="4.95"
+                                data-quantity="gyoza-app" data-image="images/appetizers/gyoza.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/appetizers/shrimp_tempura.jpg">
+                    <h4>Shrimp Tempura (8 pieces)</h4>
+                    <p>Deep fried black tiger shrimp with tempura sauce.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$8.95</b></div>
+                    <div class="item-qty">
+                        <label for="shrimp-tempura">Qty: </label>
+                        <select id="shrimp-tempura">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="shrimp-tempura"
+                                data-name="Shrimp Tempura (8 pieces)"
+                                data-summary="Deep fried black tiger shrimp with tempura sauce." data-price="8.95"
+                                data-quantity="shrimp-tempura" data-image="images/appetizers/shrimp_tempura.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/appetizers/yam_tempura.jpg">
+                    <h4>Yam Tempura (8 pieces)</h4>
+                    <p>Deep fried sliced yams with honey garlic dip.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$8.95</b></div>
+                    <div class="item-qty">
+                        <label for="yam-tempura">Qty: </label>
+                        <select id="yam-tempura">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="yam-tempura"
+                                data-name="Yam Tempura (8 pieces)"
+                                data-summary="Deep fried sliced yams with honey garlic dip." data-price="8.95"
+                                data-quantity="yam-tempura" data-image="images/appetizers/yam_tempura.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="body-left">
+        <form class="search-bar">
+            <input id="search" type="text" placeholder="Search...">
+        </form>
+        <h3 class="menu-title">Menu</h3>
+        <div class="menu">
+            <ul class="menu-items">
+                <li style="background-color: #ecc6c6;"><a href="javascript:location.reload()">Appetizers</a></li>
+                <li><a href="rolls.html">Rolls</a></li>
+                <li><a href="nigiri.html">Nigiri</a></li>
+                <li><a href="sashimi.html">Sashimi</a></li>
+                <li><a href="donburi.html">Donburi</a></li>
+                <li><a href="daily_specials.html">Daily Specials</a></li>
+                <li><a href="make_sushi.html">Make Your Own Sushi</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div><label for="refresh"></label><input type="text" style="display:none;" id="refresh" value="no"></div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Samurai Sushi - Payment by Debit or Credit Card</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mycart.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <style>
+        .row {
+            display: -ms-flexbox; /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE10 */
+            flex-wrap: wrap;
+            margin: 0 -16px;
+            width: 100%;
+        }
+
+        .col-50 {
+            -ms-flex: 50%; /* IE10 */
+            flex: 50%;
+        }
+
+        .col-75 {
+            -ms-flex: 75%; /* IE10 */
+            flex: 75%;
+        }
+
+        .col-50, .col-75 {
+            padding: 0 16px;
+        }
+
+        input[type=text] {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .icon-container {
+            margin-bottom: 20px;
+            padding: 7px 0;
+            font-size: 24px;
+        }
+
+        .btn-row {
+            align-self: end;
+            margin-left: 17px;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: repeat(2, auto);
+            grid-template-areas: "btn-item1 btn-item2";
+            align-items: center;
+        }
+
+        .cc-db-back-btn {
+            grid-area: btn-item1;
+            justify-self: start;
+        }
+
+        .submit-btn {
+            grid-area: btn-item2;
+            justify-self: end;
+        }
+
+        a {
+            color: #2196F3;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html" title="Homepage">
+                    <img class="img-responsive" src="images/samurai_logo.png">
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="header-right">
+            <div class="request-help"><a href="#" id="requestHelp"><span></span>Request Help</a></div>
+            <div class="cart-icon" style="visibility: hidden;">
+                <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span
+                        class="badge badge-notify my-cart-badge"></span><span id="cart-text">Cart: $0.00</span></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-75">
+        <div class="container">
+            <form class="done-payment" action="finish.html">
+                <div class="row">
+                    <div class="col-50">
+                        <div class="col-50">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <h3>Payment</h3>
+                            <label>Credit/Debit Card</label>
+                            <div class="icon-container">
+                                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            </div>
+                            <label for="cname">Name on Card</label>
+                            <input type="text" id="cname" name="cardname" placeholder="E.g. John Smith" required
+                                   minlength="1" maxlength="19" pattern="^[a-zA-Z]*$">
+                            <label for="ccnum">Card Number</label>
+                            <input type="text" id="ccnum" name="cardnumber" placeholder="E.g. 1111222233334444" required
+                                   minlength="16" maxlength="16" pattern="^[0-9]*$">
+                            <div class="row">
+                                <div class="col-50">
+                                    <label for="expmonth">Exp Month</label>
+                                    <input type="text" id="expmonth" name="expmonth" placeholder="E.g. 08" required
+                                           minlength="1" maxlength="2" pattern="^[0-9]*$">
+                                </div>
+                                <div class="col-50">
+                                    <label for="expyear">Exp Year</label>
+                                    <input type="text" id="expyear" name="expyear" placeholder="E.g. 2018" required
+                                           minlength="4" maxlength="4" pattern="^[0-9]*$">
+                                </div>
+                            </div>
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="E.g. 123" required minlength="3"
+                                   maxlength="3" pattern="^[0-9]*$">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-row">
+                    <div class="cc-db-back-btn">
+                        <input type="button" value="Go Back" class="btn btn-lg" onclick="history.back()">
+                    </div>
+                    <div class="submit-btn">
+                        <input type="submit" value="Submit" class="btn btn-success btn-lg">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div><label for="refresh"></label><input type="text" style="display:none;" id="refresh" value="no"></div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Samurai Sushi - Sashimi</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mycart.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html" title="Homepage">
+                    <img class="img-responsive" src="images/samurai_logo.png">
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="header-right">
+            <div class="request-help"><a href="#" id="requestHelp"><span></span>Request Help</a></div>
+            <div class="cart-icon">
+                <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span
+                        class="badge badge-notify my-cart-badge"></span><span id="cart-text">Cart: $0.00</span></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="body-right">
+        <div id="results" class="grid-food">
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/sashimi/pink_tuna_sashimi.jpg">
+                    <h4>Pink Tuna Sashimi (3 pieces)</h4>
+                    <p>Thin slices of pink tuna.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$4.95</b></div>
+                    <div class="item-qty">
+                        <label for="pink-tuna-sashimi">Qty: </label>
+                        <select id="pink-tuna-sashimi">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="pink-tuna-sashimi"
+                                data-name="Pink Tuna Sashimi (3 pieces)" data-summary="Thin slices of pink tuna."
+                                data-price="4.95" data-quantity="pink-tuna-sashimi"
+                                data-image="images/sashimi/pink_tuna_sashimi.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/sashimi/red_tuna_sashimi.jpg">
+                    <h4>Red Tuna Sashimi (3 pieces)</h4>
+                    <p>Thin slices of red tuna.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$5.95</b></div>
+                    <div class="item-qty">
+                        <label for="red-tuna-sashimi">Qty: </label>
+                        <select id="red-tuna-sashimi">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="red-tuna-sashimi"
+                                data-name="Red Tuna Sashimi (3 pieces)" data-summary="Thin slices of red tuna."
+                                data-price="5.95" data-quantity="red-tuna-sashimi"
+                                data-image="images/sashimi/red_tuna_sashimi.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/sashimi/salmon_sashimi.jpg">
+                    <h4>Salmon Sashimi (3 pieces)</h4>
+                    <p>Thin slices of salmon.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$4.95</b></div>
+                    <div class="item-qty">
+                        <label for="salmon-sashimi">Qty: </label>
+                        <select id="salmon-sashimi">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="salmon-sashimi"
+                                data-name="Salmon Sashimi (3 pieces)" data-summary="Thin slices of salmon."
+                                data-price="4.95" data-quantity="salmon-sashimi"
+                                data-image="images/sashimi/salmon_sashimi.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/sashimi/white_tuna_sashimi.jpg">
+                    <h4>White Tuna Sashimi (3 pieces)</h4>
+                    <p>Thin slices of white tuna.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$4.95</b></div>
+                    <div class="item-qty">
+                        <label for="white-tuna-sashimi">Qty: </label>
+                        <select id="white-tuna-sashimi">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="white-tuna-sashimi"
+                                data-name="White Tuna Sashimi (3 pieces)" data-summary="Thin slices of white tuna."
+                                data-price="4.95" data-quantity="white-tuna-sashimi"
+                                data-image="images/sashimi/white_tuna_sashimi.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="body-left">
+        <form class="search-bar">
+            <input id="search" type="text" placeholder="Search...">
+        </form>
+        <h3 class="menu-title">Menu</h3>
+        <div class="menu">
+            <ul class="menu-items">
+                <li><a href="appetizers.html">Appetizers</a></li>
+                <li><a href="rolls.html">Rolls</a></li>
+                <li><a href="nigiri.html">Nigiri</a></li>
+                <li style="background-color: #ecc6c6;"><a href="javascript:location.reload()">Sashimi</a></li>
+                <li><a href="donburi.html">Donburi</a></li>
+                <li><a href="daily_specials.html">Daily Specials</a></li>
+                <li><a href="make_sushi.html">Make Your Own Sushi</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div><label for="refresh"></label><input type="text" style="display:none;" id="refresh" value="no"></div>
+</body>
+</html>

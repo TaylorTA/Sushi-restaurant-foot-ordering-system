@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Samurai Sushi - Rolls</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mycart.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html" title="Homepage">
+                    <img class="img-responsive" src="images/samurai_logo.png">
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="header-right">
+            <div class="request-help"><a href="#" id="requestHelp"><span></span>Request Help</a></div>
+            <div class="cart-icon">
+                <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span
+                        class="badge badge-notify my-cart-badge"></span><span id="cart-text">Cart: $0.00</span></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="body-right">
+        <div id="results" class="grid-food">
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/rolls/alaska_roll.jpg">
+                    <h4>Alaska Roll (6 pieces)</h4>
+                    <p>Avocado, salmon and mayo.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$5.45</b></div>
+                    <div class="item-qty">
+                        <label for="alaska-roll">Qty: </label>
+                        <select id="alaska-roll">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="alaska-roll"
+                                data-name="Alaska Roll (6 pieces)" data-summary="Avocado, salmon and mayo."
+                                data-price="5.45" data-quantity="alaska-roll" data-image="images/rolls/alaska_roll.jpg">
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/rolls/avocado_roll.jpg">
+                    <h4>Avocado Roll (6 pieces)</h4>
+                    <p>Avocado and mayo.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$3.95</b></div>
+                    <div class="item-qty">
+                        <label for="avocado-roll">Qty: </label>
+                        <select id="avocado-roll">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="avocado-roll"
+                                data-name="Avocado Roll (6 pieces)" data-summary="Avocado and mayo." data-price="3.95"
+                                data-quantity="avocado-roll" data-image="images/rolls/avocado_roll.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/rolls/california_roll.jpg">
+                    <h4>California Roll (6 pieces)</h4>
+                    <p>Avocado, cucumber, crab meat and fish eggs.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$4.95</b></div>
+                    <div class="item-qty">
+                        <label for="california-roll">Qty: </label>
+                        <select id="california-roll">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="california-roll"
+                                data-name="California Roll (6 pieces)"
+                                data-summary="Avocado, cucumber, crab meat and fish eggs." data-price="4.95"
+                                data-quantity="california-roll" data-image="images/rolls/california_roll.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/rolls/crazy_roll.jpg">
+                    <h4>Crazy Roll (6 pieces)</h4>
+                    <p>Cooked shrimp, octopus, yellow tail, fish eggs and mayo.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$6.45</b></div>
+                    <div class="item-qty">
+                        <label for="crazy-roll">Qty: </label>
+                        <select id="crazy-roll">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="crazy-roll"
+                                data-name="Crazy Roll (6 pieces)"
+                                data-summary="Cooked shrimp, octopus, yellow tail, fish eggs and mayo."
+                                data-price="6.45" data-quantity="crazy-roll" data-image="images/rolls/crazy_roll.jpg">
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/rolls/kamikaze_roll.jpg">
+                    <h4>Kamikaze Roll (6 pieces)</h4>
+                    <p>Red tuna, fish eggs, mayo, green onion, hot sauce and cucumber.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$6.45</b></div>
+                    <div class="item-qty">
+                        <label for="kamikaze-roll">Qty: </label>
+                        <select id="kamikaze-roll">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="kamikaze-roll"
+                                data-name="Kamikaze Roll (6 pieces)"
+                                data-summary="Red tuna, fish eggs, mayo, green onion, hot sauce and cucumber."
+                                data-price="6.45" data-quantity="kamikaze-roll"
+                                data-image="images/rolls/kamikaze_roll.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/rolls/philadelphia_roll.jpg">
+                    <h4>Philadelphia Roll (6 pieces)</h4>
+                    <p>Avocado, cucumber, salmon, cream cheese and mayo.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$5.95</b></div>
+                    <div class="item-qty">
+                        <label for="philadelphia-roll">Qty: </label>
+                        <select id="philadelphia-roll">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="philadelphia-roll"
+                                data-name="Philadelphia Roll (6 pieces)"
+                                data-summary="Avocado, cucumber, salmon, cream cheese and mayo." data-price="5.95"
+                                data-quantity="philadelphia-roll" data-image="images/rolls/philadelphia_roll.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/rolls/red_tuna_roll.jpg">
+                    <h4>Red Tuna Roll (6 pieces)</h4>
+                    <p>Red tuna and wasabi.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$4.95</b></div>
+                    <div class="item-qty">
+                        <label for="red-tuna-roll">Qty: </label>
+                        <select id="red-tuna-roll">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="red-tuna-roll"
+                                data-name="Red Tuna Roll (6 pieces)" data-summary="Red tuna and wasabi."
+                                data-price="4.95" data-quantity="red-tuna-roll"
+                                data-image="images/rolls/red_tuna_roll.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/rolls/salmon_roll.jpg">
+                    <h4>Salmon Roll (6 pieces)</h4>
+                    <p>Salmon and wasabi.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$4.95</b></div>
+                    <div class="item-qty">
+                        <label for="salmon-roll">Qty: </label>
+                        <select id="salmon-roll">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="salmon-roll"
+                                data-name="Salmon Roll (6 pieces)" data-summary="Salmon and wasabi." data-price="4.95"
+                                data-quantity="salmon-roll" data-image="images/rolls/salmon_roll.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/rolls/shiitake_roll.jpg">
+                    <h4>Shiitake Roll (6 pieces)</h4>
+                    <p>Shiitake mushroom and mayo.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$3.95</b></div>
+                    <div class="item-qty">
+                        <label for="shiitake-roll">Qty: </label>
+                        <select id="shiitake-roll">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="shiitake-roll"
+                                data-name="Shiitake Roll (6 pieces)" data-summary="Shiitake mushroom and mayo."
+                                data-price="3.95" data-quantity="shiitake-roll"
+                                data-image="images/rolls/shiitake_roll.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tile-food">
+                <div class="tile-img">
+                    <img class="img-responsive" src="images/rolls/spider_roll.jpg">
+                    <h4>Spider Roll (6 pieces)</h4>
+                    <p>Deep fried soft shell crab, avocado and fish eggs.</p>
+                </div>
+                <div class="price-row">
+                    <div class="item-price"><b>$6.95</b></div>
+                    <div class="item-qty">
+                        <label for="spider-roll">Qty: </label>
+                        <select id="spider-roll">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="item-add">
+                        <button class="btn btn-success my-cart-btn" data-id="spider-roll"
+                                data-name="Spider Roll (6 pieces)"
+                                data-summary="Deep fried soft shell crab, avocado and fish eggs." data-price="6.95"
+                                data-quantity="spider-roll" data-image="images/rolls/spider_roll.jpg">Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="body-left">
+        <form class="search-bar">
+            <input id="search" type="text" placeholder="Search...">
+        </form>
+        <h3 class="menu-title">Menu</h3>
+        <div class="menu">
+            <ul class="menu-items">
+                <li><a href="appetizers.html">Appetizers</a></li>
+                <li style="background-color: #ecc6c6;"><a href="javascript:location.reload()">Rolls</a></li>
+                <li><a href="nigiri.html">Nigiri</a></li>
+                <li><a href="sashimi.html">Sashimi</a></li>
+                <li><a href="donburi.html">Donburi</a></li>
+                <li><a href="daily_specials.html">Daily Specials</a></li>
+                <li><a href="make_sushi.html">Make Your Own Sushi</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div><label for="refresh"></label><input type="text" style="display:none;" id="refresh" value="no"></div>
+</body>
+</html>

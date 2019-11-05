@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Samurai Sushi - Thank You For Your Order</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mycart.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <style>
+        .pic-pos {
+            display: block;
+            float: left;
+            width: 30%;
+            position: relative;
+            top: 130px;
+            left: 10%;
+        }
+
+        .right {
+            display: block;
+            float: right;
+            margin-right: 12%;
+            margin-top: 130px;
+            width: 35%;
+            text-align: center;
+            position: relative;
+        }
+
+        .return-home {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html" title="Homepage">
+                    <img class="img-responsive" src="images/samurai_logo.png">
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="header-right">
+            <div class="request-help"><a href="#" id="requestHelp"><span></span>Request Help</a></div>
+            <div class="cart-icon" style="visibility: hidden;">
+                <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span
+                        class="badge badge-notify my-cart-badge"></span><span id="cart-text">Cart: $0.00</span></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="pic-pos">
+        <img class="img-responsive" style="max-height:400px;" src="images/finish/old_man.jpg">
+    </div>
+    <div class="right">
+        <img class="img-responsive" src="images/finish/thank_you.jpg">
+        <h5><b>Your food is currently being prepared</b></h5>
+        <h5><b>and will be served to you shortly.</b></h5>
+        <div class="return-home">
+            <a href="index.html"><button class="btn btn-success btn-lg">Return to Homepage</button></a>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div><label for="refresh"></label><input type="text" style="display:none;" id="refresh" value="no"></div>
+</body>
+</html>

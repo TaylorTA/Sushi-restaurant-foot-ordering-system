@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Samurai Sushi - Payment by Gift Card</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lunr.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mycart.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <style>
+        .row {
+            display: -ms-flexbox; /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE10 */
+            flex-wrap: wrap;
+            margin: 0 -16px;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .col-50 {
+            -ms-flex: 50%; /* IE10 */
+            flex: 50%;
+        }
+
+        .col-75 {
+            -ms-flex: 75%; /* IE10 */
+            flex: 75%;
+        }
+
+        .col-50,
+        .col-75 {
+            padding: 0 16px;
+        }
+
+        input[type=text] {
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .icon-container {
+            margin-bottom: 20px;
+            padding: 7px 0;
+            font-size: 24px;
+        }
+
+        a {
+            color: #2196F3;
+        }
+
+        .btn-row {
+            align-self: end;
+            margin-left: 17px;
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: repeat(2, auto);
+            grid-template-areas: "btn-item1 btn-item2";
+            align-items: center;
+        }
+
+        .cc-db-back-btn {
+            grid-area: btn-item1;
+            justify-self: start;
+        }
+
+        .submit-btn {
+            grid-area: btn-item2;
+            justify-self: end;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html" title="Homepage">
+                    <img class="img-responsive" src="images/samurai_logo.png">
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="header-right">
+            <div class="request-help"><a href="#" id="requestHelp"><span></span>Request Help</a></div>
+            <div class="cart-icon" style="visibility: hidden;">
+                <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span
+                        class="badge badge-notify my-cart-badge"></span><span id="cart-text">Cart: $0.00</span></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-75">
+        <div class="container">
+            <form class="done-payment" action="finish.html">
+                <div class="row">
+                    <div class="col-50">
+                        <div class="col-50">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <h3>Payment</h3>
+                            <label>Gift Card</label>
+                            <div class="tile-img" style="z-index: -1;">
+                                <img class="img-responsive" src="images/giftcard.png">
+                            </div>
+                            <label for="gcnum">Gift Card Number</label>
+                            <input type="text" id="gcnum" name="cardnumber" placeholder="E.g. 1111222233334444" required
+                                   minlength="16" maxlength="16" pattern="^[0-9]*$">
+                            <label for="password">PIN</label>
+                            <input type="text" id="password" name="password" placeholder="E.g. 1234" required
+                                   minlength="4" maxlength="4" pattern="^[0-9]*$">
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-row">
+                    <div class="cc-db-back-btn">
+                        <input type="button" value="Go Back" class="btn btn-lg" onclick="history.back()">
+                    </div>
+                    <div class="submit-btn">
+                        <input type="submit" value="Submit" class="btn btn-success btn-lg">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div><label for="refresh"></label><input type="text" style="display:none;" id="refresh" value="no"></div>
+</body>
+</html>
